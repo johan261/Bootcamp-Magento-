@@ -1,0 +1,23 @@
+<?php
+/** @var \OmniPro\FrontEnd\Block\Template $block */
+?>
+
+<h1>INGRESO</h1>
+ <div class="email required">
+ <label for="email" class="label"><span>Email</span></label>
+    <div class="control">
+    <input type="text" id="email" name="email" placeholder="ejemplo@email.com" class="input-text" data-validate='{"required":true}'>
+ </div>
+ <div class="password required">
+ <label for="password" class="label"><span>Constraseña</span></label>
+    <div class="control">
+    <input type="password" id="paswd" name="password" placeholder="********" class="input-text" data-validate='{"required":true}'>
+ </div>
+ <div class="actions-toolbar">
+	        <div class="primary">
+            		<input type="hidden" name="hideit" id="hideit" value="" />
+            		<button type="submit" title="Submit" class="btn btn-lg btn-primary btn-block btn-signin">
+                		<span>INGRESO</span>
+            		</button>
+        	</div>
+    	</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+        <preference for="OmniPro\MyBlog\Api\Data\BlogInterface" type="OmniPro\MyBlog\Model\Blog"/>
+        <preference for="OmniPro\MyBlog\Api\BlogRepositoryInterface" type="OmniPro\MyBlog\Model\BlogRepository"/>
+        <preference for="OmniPro\MyBlog\Api\Data\BlogSearchResultInterface" type="OmniPro\MyBlog\Model\BlogSearchResult"/>
+      
+        <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+                <arguments>
+                        <argument name="collectionns" xsi:type="array">
+                        <item name="omnipro_blog_post_listing_data_source" xsi:type="string">OmniPro\MyBlog\Model\ResourceModel\Blog\Grid\Collection</item>      
+                        </argument>
+                </arguments>
+        </type>
+        <virtualType name="OmniPro\MyBlog\Model\ResourceModel\Blog\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+                <arguments>
+                        <argument name="mainTable" xsi:type="string">omni_blog</argument> <!-- NOMBRE DE LA TABLA B.D-->
+                        <argument name="resourceModel" xsi:type="string">OmniPro\MyBlog\Model\ResourceModel\Blog</argument>
+                </arguments>
+        </virtualType>
+        <type name="OmniPro\MyBlog\Api\BlogRepositoryInterface">
+                <plugin name="omnipro_myblog_repository_plugin" type="OmniPro\MyBlog\Plugin\BlogRepositoryPlugin" sortOrder="1" disabled="false" />
+        </type>
+</config>  

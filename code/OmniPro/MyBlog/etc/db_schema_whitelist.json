@@ -1,0 +1,15 @@
+{
+    "omni_blog": {
+        "column": {
+            "blog_id": true,
+            "blog_titulo": true,
+            "blogItem_fecha": true,
+            "blog_urlimagen": true,
+            "blog_emailAutor": true,
+            "blog_contenido": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

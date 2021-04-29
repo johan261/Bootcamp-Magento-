@@ -1,0 +1,26 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<h3>New blog post</h3>
+<form class="form" action="<?= $block->getUrl('myblog/index/save') ?>" method="post" data-hasrequired="* Required Fields" data-mage-init='{"validation":{}}' enctype='multipart/form-data'>
+    <fieldset class="fieldset">
+    <h1>INGRESO</h1>
+ <div class="email required">
+ <label for="email" class="label"><span>EMAIL</span></label>
+    <div class="control">
+    <input type="text" id="email" name="email" placeholder="ejemplo@email.com" class="input-text" data-validate='{"required":true}'>
+ </div>
+ <div class="password required">
+ <label for="password" class="label"><span>CONTRASEÑA</span></label>
+    <div class="control">
+    <input type="password" id="paswd" name="password" placeholder="********" class="input-text" data-validate='{"required":true}'>
+ </div>
+ <div class="actions-toolbar">
+	        <div class="primary">
+            		<input type="hidden" name="hideit" id="hideit" value="" />
+            		<button type="submit" title="Submit" class="btn btn-lg btn-primary btn-block btn-signin">
+                		<span>INGRESO</span>
+            		</button>
+        	</div>
+    	</div>

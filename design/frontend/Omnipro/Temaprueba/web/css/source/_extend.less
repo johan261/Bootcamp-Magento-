@@ -1,0 +1,189 @@
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+     
+    .menu {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .menu .boton-menu {
+        border: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #393FD0;
+    }
+
+    .menu .boton-menu .icon-menu {
+        margin: 4px 0;
+        height: 30px;
+    }
+
+    .menu-list {
+        position: absolute;
+        margin-top: 15px;
+    }
+    
+
+    .icon {
+        margin: 7.2% 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    .page-wrapper{
+        background-color: #393FD0;
+        background-repeat: no-repeat, no-repeat,no-repeat;
+        background-position: 50% -10%, 0 0, right 80%;
+    }
+
+    .head-login, .head-register{
+            width: 48%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Dosis', sans-serif;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: center;
+    }
+
+    .boton-head-login, .boton-head-register{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        color: white;
+        font-family: 'Dosis';
+        background-color: #3A3061;
+    }
+
+    .contenedor{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        height: 100%;
+    }
+
+    .contenedor{
+        .boton-login, .boton-register{
+                width: 90%;
+                height: 44px;
+                margin: 0 auto;
+                border-radius: 24px;
+                background-image: linear-gradient(to right, #8DE7ED, #2FCEC5);
+                text-transform: uppercase;
+        }
+    }
+
+    .form-login, .form-register {
+       background:#3A3061;
+       mix-blend-mode: normal;
+       opacity: 0.9;
+       border-radius: 0px 0px 6px 6px;
+       padding: 2rem;
+       display: flex;
+       flex-direction: column;
+    }  
+    .texto-login, .texto-register, .newsletter-text{
+        color: white;
+        font-family: 'Dosis';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .form-texto-login, .form-texto-register{
+        height: 50px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid white;
+        border-left: 0px;
+        margin: 8px 0px 6px 0px;
+        background-color: #3A3061;
+    }
+    .newsletter-switch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 10px 0;
+    .switch-login{
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        
+    }
+    .switch-login input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    input:checked + .slider {
+        background-color: #2FCEC5;
+    }
+      
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2FCEC5;
+    }
+      
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+      
+      /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+      
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .newsletter-text {
+        margin-left: 10px;
+    }
+   
+  }
+  label {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.texto-login-a{
+    color: white;
+}
+}

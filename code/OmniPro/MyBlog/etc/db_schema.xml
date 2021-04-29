@@ -1,0 +1,16 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="omni_blog" resource="default" engine="innodb" comment="Blog base de datos">
+        <column xsi:type="int" name="blog_id" padding="5" unsigned="false" nullable="true" identity="true" comment="ID Post blog"/>
+        <column xsi:type="varchar" name="blog_titulo" length="50" nullable="false" comment="Titulo " />
+        <column xsi:type="varchar" name="blog_urlimagen" length="100" nullable="false" comment="URL Imagen " />
+        <column xsi:type="varchar" name="blog_emailAutor" length="30" nullable="false" comment="Email " />
+        <column xsi:type="varchar" name="blog_contenido" length="300" nullable="false" comment="Conenido " />
+        <column xsi:type="timestamp" name="created_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Datetime"/>
+        <column xsi:type="timestamp" name="updated_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated Datetime"/>
+        
+        
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="blog_id" />
+        </constraint>
+    </table>
+</schema>

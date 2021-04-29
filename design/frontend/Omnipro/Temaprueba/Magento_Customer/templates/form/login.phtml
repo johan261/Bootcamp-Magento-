@@ -1,0 +1,71 @@
+<div class="menu">
+    <button class="boton-menu" id="botonatras-menu" onclick="hideMenu()">
+    </button>
+    <button class="boton-menu" id="boton-menu" onclick="hideMenu()">
+    </button>
+    <div id="menu-list" class="menu-list">
+    <ul>
+    <li>INICIO</li>
+    <li>SERVICIOS</li>
+    <li>NUESTRO EQUIPO</li>
+    <li>PORTAFOLIO</li>
+    <li>CONTÁCTO</li>
+    <li>TERMINOS Y CONDICIONES</li>
+    </ul>
+
+  </div>
+</div>
+<div class="icon">
+    <img src='<?php echo $this->getViewFileUrl('images/icon.svg'); ?>' alt="Demo">
+</div>
+        <div class="contenedor">
+        <div class="head-login" id="login">
+                <button class="boton-head-login" id="boton-login" onclick="hideFormRegistro()">INGRESO</button>
+            </div>
+            <div id="cuerpo">
+                <form id="form-login" class="form-login" action="">
+                    <label class="texto-login" >EMAIL</label>
+                        <input class="form-texto-login" name="usuario"  type="text" id="usuario" placeholder="Ingresa Usuario" data-validate='{"required":true}'></p>
+ 
+                    <label class="texto-login" >CONTRASEÑA</label>
+                        <input class="form-texto-login" name="contraseña" type="password" id="contraseña" placeholder="Ingresa Password" data-validate='{"required":true}'></p>
+                    <div class="newsletter-switch">   
+                        <div class="switch-login">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </div>
+                    <div class="newsletter-text">Suscribirse al Newsletter</div>
+                    </div>
+                        <button class="boton-login" class="boton-ingreso" type="submit" onclick="window.location.href = 'https://app.prueba-magento.test/default/hera-pullover-hoodie.html';">INGRESAR</button>
+                        <a class="texto-login-a" href="">Olvide la contraseña</a>
+                </form>
+                </div>
+            </div>
+        
+        <div class="contenedor">
+        <div class="head-register" id="register">
+                <button class="boton-head-register" id="boton-register" onclick="hideFormIngreso()">REGISTRO</button>
+             </div>
+            <div id="cuerpo">
+ 
+                <form id="form-register" class="form-register" action="#"  >
+                    <label class="texto-register" for="nombre">NOMBRE</label>
+                        <input class="form-texto-register" name="nombre" type="text" id="nombre"  placeholder="Pon tu nombre" /></p>
+ 
+                 
+                    <label class="texto-register" for="apellidos">APELLIDOS</label>
+                        <input class="form-texto-register" name="apellidos" type="text" id="apellidos"  placeholder="Pon tus apellidos" /></p>
+ 
+                    <label class="texto-register" for="correo">EMAIL:</label>
+                        <input class="form-texto-register" name="correo" type="text" id="correo" placeholder="Pon tu mail" /></p>
+ 
+                    <label class="texto-register" for="pass">CONTRASEÑA</label>
+                        <input class="form-texto-register" name="pass" type="password" id="pass"  placeholder="Pon tu contraseña"/></p>
+ 
+                    <button class="boton-register" class="boton-ingreso" type="submit">REGISTRO</button>
+                </form>
+            </div>
+        </div>
+    <script>
+    hideFormRegistro();
+</script>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <head>
+   <css src="OmniPro_MyBlog::css/blog.css" rel="stylesheet" type="text/css" />
+   </head>
+    <body>
+        <referenceContainer name="content">
+            <block  name="OmniPro_MyBlog_titulo" template="OmniPro_MyBlog::titulo.phtml" >
+            <arguments>
+               <argument name="view_model" xsi:type="object">OmniPro\MyBlog\ViewModel\BlogViewModel</argument>
+            </arguments>
+            </block>
+            <block  name="OmniPro_MyBlog_form" template="OmniPro_MyBlog::form.phtml" >
+            <arguments>
+                <argument name="view_model" xsi:type="object">OmniPro\MyBlog\ViewModel\BlogViewModel</argument>
+            </arguments>
+            </block>
+            <block name="omnipro_myblog_form" template="OmniPro_MyBlog::itemsko.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">OmniPro\MyBlog\ViewModel\BlogViewModel</argument>
+                </arguments>
+            </block>
+            <block name="omnipro_myblog_items" template="OmniPro_MyBlog::itemsko.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="blogComponent" xsi:type="array">
+                                <item name="component" xsi:type="string">blogItems</item>
+                                <item name="template" xsi:type="string"></item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+            <block  name="OmniPro_MyBlog_items" template="OmniPro_MyBlog::item.phtml" >
+                <arguments>
+                    <argument name="view_model" xsi:type="object">OmniPro\MyBlog\ViewModel\BlogViewModel</argument>
+                </arguments>
+                </block>
+        </referenceContainer>
+    </body>
+</page>
